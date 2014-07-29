@@ -55,8 +55,7 @@ bind '"\e\e[D": backward-word'
 export TIMEFORMAT=$'\nreal %3R\tuser %3U\tsys %3S\tpcpu %P\n'
 export HISTTIMEFORMAT="%H:%M > "
 export HISTIGNORE="&:bg:fg:lsl:hi"
-export EDITOR=emacs
-
+export EDITOR="emacs -q"
 
 #-------------------------------------------------------------
 # Path Configs
@@ -68,32 +67,6 @@ export EDITOR=emacs
 #Expanded Path info
 #----------------------------------------------
 PATH=/Applications/MAMP/bin/php/php5.4.4/bin:${PATH}:/Developer/Simulator/GTKwave/bin:~/pear/bin
-
-#---------------------------
-# Node.js
-#---------------------------
-
-export NODE_PATH="/usr/local/lib/node"
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"
-
-#--------------------------
-# Ruby
-#--------------------------
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-
-#--------------------------
-# Python
-#--------------------------
-export PATH="/usr/local/opt/python/bin:$PATH"
-
-#----------------------------------------------
-# Homebrew config
-#----------------------------------------------
-
-if [[ $SYSTYPE == "Darwin" ]]; then
-	source `brew --repository`/Library/Contributions/brew_bash_completion.sh
-fi
-
 
 #-------------------------------------------------------------
 # Greeting, motd etc...
@@ -166,6 +139,17 @@ function svndiff() { svn diff $@ | colordiff | less -R ; }
 alias sup='svn up --ignore-externals'
 alias sst='svn st --ignore-externals'
 
+alias gpr="git pull --rebase"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset %Cblue[%an]%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit"
+
+alias gs="git status"
+alias gd="git diff"
+alias gp="git push"
+alias ga="git add"
+alias gr="git rebase"
+
+#alias g-="git checkout -"
+alias gh="git show HEAD"
 
 #-------------------------------------------------------------
 # Finding
