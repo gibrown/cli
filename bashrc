@@ -66,7 +66,7 @@ export EDITOR="emacs -q"
 #----------------------------------------------
 #Expanded Path info
 #----------------------------------------------
-PATH=/Applications/MAMP/bin/php/php5.4.4/bin:${PATH}:/Developer/Simulator/GTKwave/bin:~/pear/bin
+PATH=/Applications/MAMP/bin/php/php5.4.4/bin:${PATH}:/Developer/Simulator/GTKwave/bin:~/pear/bin:~/bin
 
 #-------------------------------------------------------------
 # Greeting, motd etc...
@@ -116,7 +116,7 @@ fi
 # Screen and Tmux
 #-------------------------------------------------------------
 
-alias s="screen -d -R -U"
+#alias s="screen -d -R -U"
 alias t="tmux a -t work"
 
 #-------------------------------------------------------------
@@ -226,6 +226,9 @@ function tree()
     echo -e "\033[0m"
 }
 
+
+# ESLint for JS and JSX
+alias eslint='$(npm bin)/eslint --ext js --ext jsx'
 
 ######################################################
 # Useful Functions
