@@ -1,0 +1,19 @@
+startup_message off
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
+defscrollback 5000
+
+# Enables UTF8 support
+defutf8 on
+
+# Tells screen to use the terminal emulator buffer to enable scrollbars
+termcapinfo xterm ti@:te@
+
+# Defines CTRL-z as the escape combination instead of CTRL-a which is quite
+# useful to go to the beginning of a line in a shell or in vim. The original
+# CTRL-z binding is accessible through 'CTRL-z + a'.
+escape ^za
+
+# Makes sure previous output is not overwritten when using tools like 'less'
+altscreen on
